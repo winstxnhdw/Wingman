@@ -1,0 +1,49 @@
+name: Dependabot
+
+on: pull_request
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Install Poetry
+        run: pipx install poetry
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.11
+          cache: poetry
+
+      - name: Install Python dependencies
+        run: poetry install
+
+      - name: Download model from Huggingface Hub
+        run: python scripts/build.py
+
+      - name: Run linter
+        run: poetry run pylint $(git ls-files '*.py')
+
+      - name: Run type checker
+        run: poetry run pyright
+
+      - name: Run tests
+        run: poetry run pytest
+
+  auto-merge:
+    needs: build
+    if: ${{ github.actor == 'dependabot[bot]' }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Auto-merge Dependabot PRs
+        run: gh pr merge --auto --rebase "$PR_URL"
+        env:
+          PR_URL: ${{ github.event.pull_request.html_url }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

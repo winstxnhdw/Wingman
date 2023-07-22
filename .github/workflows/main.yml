@@ -1,0 +1,69 @@
+name: Deploy
+
+on:
+  push:
+    paths:
+      - '**.py'
+      - '**.ts'
+      - .github/workflows/main.yml
+      - package.json
+      - tsconfig.json
+      - pyproject.toml
+
+permissions:
+  contents: write
+
+jobs:
+  extension:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+            node-version: latest
+            cache: yarn
+
+      - name: Install node dependencies
+        run: yarn --frozen-lockfile
+
+      - name: Lint extension
+        run: yarn lint
+
+      - name: Build extension
+        run: yarn build
+
+  server:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Install Poetry
+        run: pipx install poetry
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.11
+          cache: poetry
+
+      - name: Install Python dependencies
+        run: poetry install
+
+      - name: Download model from Huggingface Hub
+        run: poetry run python scripts/build.py
+
+      - name: Lint
+        run: poetry run pylint (& git ls-files '*.py')
+
+      - name: Type Check
+        run: poetry run pyright
+
+      - name: Test
+        run: poetry run pytest
+
