@@ -1,7 +1,7 @@
 from asyncio import run
 from importlib import import_module
-from itertools import chain
-from os import walk
+from os import sep, walk
+from os.path import join
 from typing import Generator
 
 from fastapi import FastAPI
@@ -25,7 +25,7 @@ class Server:
     def __init__(self):
 
         self.app: FastAPI
-        self.api_directory = 'server/api'
+        self.api_directory = join('server', 'api')
 
 
     def convert_delimiters(self, string: str, old: str, new: str) -> str:
@@ -54,13 +54,16 @@ class Server:
         initialise all routes
         """
         module_file_names = [
-            [f'{root}/{file}' for file in files if not file.startswith('__') and file.endswith('.py')]
+            join(root, file)
             for root, _, files in walk(self.api_directory)
+            for file in files
+            if not file.startswith('__') and file.endswith('.py')
         ]
 
-        for file_name in chain.from_iterable(module_file_names):
-            module_name = import_module(self.convert_delimiters(file_name[:-3], '/', '.')).__name__
-            print(f" * {self.convert_delimiters(module_name[len(self.api_directory):], '.', '/')} route found!")
+        for file_name in module_file_names:
+            converted_file_name = self.convert_delimiters(file_name[:-3], sep, '.')
+            module_name = import_module(converted_file_name).__name__
+            print(f" * {self.convert_delimiters(module_name[len(self.api_directory):], '.', sep)} route found!")
 
 
     def initialise_server(self):
