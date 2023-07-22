@@ -25,8 +25,6 @@
   },
   "scripts": {
     "lint": "eslint .",
-    "dev": "node -r dotenv/config -r @swc-node/register src/index.ts",
-    "watch": "tsc -watch -p ./",
     "build": "node -r @swc-node/register scripts/build.ts",
     "test": "mocha -r @swc-node/register --extensions ts --watch --watch-files src 'tests/**/*.test.ts'",
     "testci": "mocha -r @swc-node/register --extensions ts 'tests/**/*.test.ts'"
