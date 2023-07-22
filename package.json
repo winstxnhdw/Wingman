@@ -1,4 +1,24 @@
 {
+  "name": "wingman",
+  "displayName": "Wingman",
+  "description": "An offline AI pair programmer.",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "wingman.helloWorld",
+        "title": "Hello World"
+      }
+    ]
+  },
   "scripts": {
     "lint": "eslint .",
     "dev": "node -r dotenv/config -r @swc-node/register src/index.ts",
@@ -8,7 +28,6 @@
     "testci": "mocha -r @swc-node/register --extensions ts 'tests/**/*.test.ts'"
   },
   "dependencies": {
-    "envalid": "^7.3.1",
     "tslib": "^2.6.0"
   },
   "devDependencies": {
@@ -23,7 +42,6 @@
     "@typescript-eslint/parser": "^6.1.0",
     "@vscode/test-electron": "^2.3.3",
     "chai": "^4.3.7",
-    "dotenv": "^16.3.1",
     "esbuild": "^0.18.15",
     "eslint": "^8.45.0",
     "eslint-config-prettier": "^8.8.0",
