@@ -10,12 +10,16 @@
     "Other"
   ],
   "activationEvents": [],
-  "main": "./dist/extension.js",
+  "main": "./dist/index.js",
   "contributes": {
     "commands": [
       {
-        "command": "wingman.helloWorld",
-        "title": "Hello World"
+        "command": "wingman.stealth",
+        "title": "Wingman: Toggle Stealth"
+      },
+      {
+        "command": "wingman.suggest",
+        "title": "Wingman: Suggest Code"
       }
     ]
   },
@@ -28,6 +32,7 @@
     "testci": "mocha -r @swc-node/register --extensions ts 'tests/**/*.test.ts'"
   },
   "dependencies": {
+    "got": "^13.0.0",
     "tslib": "^2.6.0"
   },
   "devDependencies": {

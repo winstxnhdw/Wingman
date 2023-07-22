@@ -10,8 +10,8 @@ async function main(args: string[]) {
   await mkdir(build_directory)
 
   await build({
-    entryPoints: ['src/extension.ts'],
-    outfile: `${build_directory}/extension.js`,
+    entryPoints: ['src/index.ts'],
+    outfile: `${build_directory}/index.js`,
     bundle: true,
     minify: args.slice(2)[0] !== 'test',
     platform: 'node',
