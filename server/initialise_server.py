@@ -1,4 +1,5 @@
 from asyncio import run
+from typing import Generator
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
@@ -8,7 +9,7 @@ from server.api import v1
 from server.config import Config
 
 
-def initialise_server():
+def initialise_server() -> Generator[FastAPI, None, None]:
     """
     Summary
     -------
@@ -24,4 +25,5 @@ def initialise_server():
         allow_headers=['*'],
     )
 
+    yield app
     run(serve(app, Config()))
