@@ -1,21 +1,33 @@
 # Wingman
 
-A no-compromise boilerplate for projects willing to be on the cutting edge of ECMAScript and Node.
+[![main.yml](https://github.com/winstxnhdw/Wingman/actions/workflows/main.yml/badge.svg)](https://github.com/winstxnhdw/Wingman/actions/workflows/main.yml)
+[![formatter.yml](https://github.com/winstxnhdw/Wingman/actions/workflows/formatter.yml/badge.svg)](https://github.com/winstxnhdw/Wingman/actions/workflows/formatter.yml)
+[![dependabot.yml](https://github.com/winstxnhdw/Wingman/actions/workflows/dependabot.yml/badge.svg)](https://github.com/winstxnhdw/Wingman/actions/workflows/dependabot.yml)
 
-## Commands
+<p align="center"><b>Welcome to the Wingman Monorepo</b></p>
+
+`Wingman` is a fast CPU-based offline AI pair programmer for [Visual Studio Code](https://code.visualstudio.com/) on Windows.
+
+## Development
 
 ### Setup
 
-Install all dependencies.
+Install all TypeScript dependencies.
 
 ```bash
 yarn
 ```
 
-Run your application.
+Install all server dependencies.
 
 ```bash
-yarn dev
+poetry install
+```
+
+Download the model from Huggingface Hub.
+
+```bash
+python scripts/build.py
 ```
 
 ### Build
@@ -34,13 +46,13 @@ yarn build test
 
 ### Test
 
-Run your tests with hot reloading.
+Test the Visual Studio Code extension.
 
 ```bash
 yarn test
 ```
 
-Run your tests without hot reloading. For testing in a CI pipeline.
+Test the server.
 
 ```bash
 yarn testci
