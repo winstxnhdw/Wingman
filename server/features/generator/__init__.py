@@ -1,5 +1,4 @@
 from ctransformers import AutoModelForCausalLM
-from huggingface_hub import snapshot_download
 
 from server.features.generator.config import GeneratorConfig
 from server.features.generator.prompt_template import PromptTemplate
@@ -21,9 +20,7 @@ class Generator:
         generate text from a prompt
     """
     prompt_template = PromptTemplate('main')
-    model_name = 'abacaj/Replit-v2-CodeInstruct-3B-ggml'
-    model_path = snapshot_download(model_name)
-    llm = AutoModelForCausalLM.from_pretrained(model_path, model_type="replit")
+    llm = AutoModelForCausalLM.from_pretrained('bin', model_type="replit")
 
     generator_config = GeneratorConfig(
         top_k=50,

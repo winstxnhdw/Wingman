@@ -1,6 +1,7 @@
 node_modules/
 dist/
 .venv/
-test/
+wingman-test/
+model.bin
 .env
 *.pyc
