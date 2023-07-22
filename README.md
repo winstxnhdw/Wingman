@@ -1,4 +1,4 @@
-# copilot
+# Wingman
 
 A no-compromise boilerplate for projects willing to be on the cutting edge of ECMAScript and Node.
 

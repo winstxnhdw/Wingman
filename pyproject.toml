@@ -21,7 +21,7 @@ reportUnknownMemberType = false
 reportMissingTypeStubs = false
 
 [tool.poetry]
-name = "copilot"
+name = "Wingman"
 version = "0.1.0"
 description = ""
 authors = ["winstxnhdw <you@example.com>"]
