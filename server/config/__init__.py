@@ -11,9 +11,10 @@ class Config(HypercornConfig):
     -------
     the config class for the server
     """
-    if not (SERVER_PORT := env['SERVER_PORT']):
-        raise NoPortFoundError
+    if not (WINGMAN_PORT := env.get('WINGMAN_PORT', 3997)):
+        if not isinstance(WINGMAN_PORT, int):
+            raise NoPortFoundError
 
-    _bind = [f"0.0.0.0:{SERVER_PORT}"]
+    _bind = [f"0.0.0.0:{WINGMAN_PORT}"]
     access_log_format = '%(s)s "%(R)s" %(h)s "%(a)s"'
     accesslog = '-'
