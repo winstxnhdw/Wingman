@@ -14,14 +14,25 @@
   "contributes": {
     "commands": [
       {
-        "command": "wingman.stealth",
-        "title": "Wingman: Toggle Stealth"
-      },
-      {
         "command": "wingman.suggest",
         "title": "Wingman: Suggest Code"
       }
-    ]
+    ],
+    "configuration": {
+      "title": "Wingman",
+      "properties": {
+        "wingman.serverPortNumber": {
+          "type": "number",
+          "default": 3997,
+          "description": "This number should be aligned with your $WINGMAN_PORT environment variable."
+        },
+        "wingman.maxReadLines": {
+          "type": "number",
+          "default": 50,
+          "description": "The maximum number of non-empty lines to send to the Wingman server. Larger values will result in greater latency."
+        }
+      }
+    }
   },
   "scripts": {
     "lint": "eslint .",
