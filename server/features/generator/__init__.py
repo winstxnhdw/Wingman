@@ -2,6 +2,7 @@ from ctransformers import AutoModelForCausalLM
 
 from server.features.generator.config import GeneratorConfig
 from server.features.generator.prompt_template import PromptTemplate
+from server.helpers import normalise_path
 
 
 class Generator:
@@ -19,8 +20,9 @@ class Generator:
     generate(prompt: str) -> str:
         generate text from a prompt
     """
+    model_path = normalise_path('bin')
     prompt_template = PromptTemplate('main')
-    llm = AutoModelForCausalLM.from_pretrained('bin', model_type="replit")
+    llm = AutoModelForCausalLM.from_pretrained(model_path, model_type="replit")
 
     generator_config = GeneratorConfig(
         top_k=50,

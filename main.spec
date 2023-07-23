@@ -13,7 +13,7 @@ analysis = Analysis(
     ],
     datas = [
         ('bin', 'bin'),
-        ('server/features/generator/templates/main.txt', 'server/features/generator/templates')
+        ('server\\features\\generator\\templates\\main.txt', 'server\\features\\generator\\templates')
     ],
     pathex = [],
     hiddenimports = [],
@@ -33,12 +33,13 @@ pyz = PYZ(
     cipher=block_cipher
 )
 
-exe = EXE(
+EXE(
     pyz,
     analysis.scripts,
-    [],
-    exclude_binaries=True,
-    name='main',
+    analysis.binaries,
+    analysis.zipfiles,
+    analysis.datas,
+    name='Wingman',
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,
@@ -49,15 +50,4 @@ exe = EXE(
     target_arch=None,
     codesign_identity=None,
     entitlements_file=None,
-)
-
-coll = COLLECT(
-    exe,
-    analysis.binaries,
-    analysis.zipfiles,
-    analysis.datas,
-    strip=False,
-    upx=True,
-    upx_exclude=[],
-    name='main',
 )

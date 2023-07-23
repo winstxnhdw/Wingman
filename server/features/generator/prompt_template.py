@@ -1,6 +1,6 @@
 from typing import Literal
 
-from server.helpers import load_file
+from server.helpers import load_file, normalise_path
 
 
 class PromptTemplate:
@@ -20,7 +20,8 @@ class PromptTemplate:
     """
     def __init__(self, template_name: Literal['main']):
 
-        template_generator = load_file(f'server/features/generator/templates/{template_name}.txt')
+        template_path = normalise_path(f'server/features/generator/templates/{template_name}.txt')
+        template_generator = load_file(template_path)
         self.template = ''.join(template_generator)
 
 
