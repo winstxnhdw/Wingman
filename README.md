@@ -8,7 +8,16 @@
 
 `Wingman` is a fast CPU-based offline AI pair programmer for [Visual Studio Code](https://code.visualstudio.com/) on Windows.
 
+## Features
+
+- No internet connection required
+- No GPU required
+- Self-contained
+- Fast
+
 ## Development
+
+If you would like to contribute to `Wingman`, here are some instructions to get you started.
 
 ### Setup
 
@@ -22,12 +31,6 @@ Install all server dependencies.
 
 ```bash
 poetry install
-```
-
-Build the installer.
-
-```bash
-python scripts/build.py
 ```
 
 ### Build
@@ -44,6 +47,12 @@ Human-readable bundle of your Node application. For debugging purposes.
 yarn build test
 ```
 
+Build the installer.
+
+```bash
+python scripts/build.py
+```
+
 ### Test
 
 Test the Visual Studio Code extension.
@@ -55,5 +64,5 @@ yarn test
 Test the server.
 
 ```bash
-yarn testci
+pytest
 ```
