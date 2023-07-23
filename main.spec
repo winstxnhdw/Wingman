@@ -13,8 +13,8 @@ analysis = Analysis(
     ],
     datas = [
         ('bin', 'bin'),
-        ('server\\features\\generator\\templates\\main.txt', 'server\\features\\generator\\templates')
-        ('out\\wingman.vsix', 'out'),
+        ('server\\features\\generator\\templates\\main.txt', 'server\\features\\generator\\templates'),
+        ('out\\wingman.vsix', 'out')
     ],
     pathex = [],
     hiddenimports = [],
