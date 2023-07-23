@@ -17,7 +17,14 @@
 
 ## Development
 
-If you would like to contribute to `Wingman`, here are some instructions to get you started.
+If you would like to contribute to `Wingman`, here is some information to get you started.
+
+### Requirements
+
+- [Python 3.11](https://www.python.org/downloads/release/python-3110/)
+- [Node.js 16](https://nodejs.org/ja/blog/release/v16.16.0)
+- [Poetry](https://python-poetry.org/)
+- [Yarn](https://yarnpkg.com/)
 
 ### Setup
 
