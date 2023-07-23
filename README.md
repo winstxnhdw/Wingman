@@ -6,7 +6,7 @@
 
 <p align="center"><b>Welcome to the Wingman Monorepo</b></p>
 
-`Wingman` is a fast CPU-based offline AI pair programmer for [Visual Studio Code](https://code.visualstudio.com/) on Windows.
+`Wingman` is a fast CPU-first offline AI pair programmer for [Visual Studio Code](https://code.visualstudio.com/) on Windows. It leverages the fast inference speeds of [ctransformers](https://github.com/marella/ctransformers) and a lightweight 4-bit quantised model to provide a seamless pair programming experience on low-end machines. You may find the model [here](https://huggingface.co/winstxnhdw/Replit-v2-CodeInstruct-3B-ggml-4bit).
 
 ## Features
 
