@@ -19,8 +19,8 @@ def main():
             pass
 
     finally:
-        with Popen(['code', '--uninstall-extension', 'undefined_publisher.wingman']) as _:
-            pass
+        with Popen(['code', '--uninstall-extension', 'undefined_publisher.wingman']) as process:
+            process.wait()
 
 
 if __name__ == '__main__':
