@@ -55,14 +55,14 @@ jobs:
       - name: Install Python dependencies
         run: poetry install
 
-      - name: Download model from Huggingface Hub
-        run: poetry run python scripts/build.py
-
       - name: Lint
         run: poetry run pylint (& git ls-files '*.py')
 
       - name: Type Check
         run: poetry run pyright
+
+      - name: Build
+        run: poetry run python scripts/build.py
 
       - name: Test
         run: poetry run pytest
