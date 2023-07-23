@@ -1,4 +1,4 @@
-from server import Server
+from server import initialise
 
 
 def main():
@@ -7,7 +7,7 @@ def main():
     -------
     exhaust the initialise generator and run the server
     """
-    for _ in Server.initialise():
+    for _ in initialise():
         pass
 
 

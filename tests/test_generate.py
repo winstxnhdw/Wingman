@@ -3,12 +3,12 @@
 from fastapi.testclient import TestClient
 from pytest import fixture
 
-from server import Server
+from server import initialise
 
 
 @fixture()
 def client():
-    return TestClient(next(Server.initialise()))
+    return TestClient(next(initialise()))
 
 
 def test_generate(client: TestClient):
