@@ -1,6 +1,7 @@
 node_modules/
 dist/
 .venv/
+build/
 model.bin
 .env
 *.pyc
