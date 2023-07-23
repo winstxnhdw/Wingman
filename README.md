@@ -24,7 +24,7 @@ Install all server dependencies.
 poetry install
 ```
 
-Download the model from Huggingface Hub.
+Build the installer.
 
 ```bash
 python scripts/build.py
