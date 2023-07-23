@@ -1,5 +1,6 @@
 node_modules/
 dist/
+out/
 .venv/
 build/
 model.bin
