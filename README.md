@@ -4,13 +4,16 @@
 [![formatter.yml](https://github.com/winstxnhdw/Wingman/actions/workflows/formatter.yml/badge.svg)](https://github.com/winstxnhdw/Wingman/actions/workflows/formatter.yml)
 [![dependabot.yml](https://github.com/winstxnhdw/Wingman/actions/workflows/dependabot.yml/badge.svg)](https://github.com/winstxnhdw/Wingman/actions/workflows/dependabot.yml)
 
-<p align="center"><b>Welcome to the Wingman Monorepo</b></p>
+<p align="center"><b>Monorepo for Wingman</b></p>
 
-`Wingman` is a fast CPU-first offline AI pair programmer for [Visual Studio Code](https://code.visualstudio.com/) on Windows. It leverages the fast inference speeds of [ctransformers](https://github.com/marella/ctransformers) and a lightweight 4-bit quantised model to provide a seamless pair programming experience on low-end machines. You may find the model [here](https://huggingface.co/winstxnhdw/Replit-v2-CodeInstruct-3B-ggml-4bit).
+> Did you know that the **Win** in **Win**gman stands for **Win**dows?
+
+`Wingman` is a **fast CPU-first offline AI pair programmer** for [Visual Studio Code](https://code.visualstudio.com/) on Windows. `Wingman` comes with a self-contained [FastAPI](https://fastapi.tiangolo.com/) server that leverages the fast inference speeds of [ctransformers](https://github.com/marella/ctransformers) and a lightweight 4-bit quantised model to provide a seamless pair programming experience on low-end machines. You may find the used model [here](https://huggingface.co/winstxnhdw/Replit-v2-CodeInstruct-3B-ggml-4bit).
 
 ## Features
 
 - No internet connection required
+- No API keys required
 - No GPU required
 - Self-contained
 - Fast
