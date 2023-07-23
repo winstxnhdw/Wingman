@@ -2,6 +2,10 @@
   "name": "wingman",
   "displayName": "Wingman",
   "description": "An offline AI pair programmer.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/winstxnhdw/Wingman"
+  },
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.80.0"
@@ -10,7 +14,7 @@
     "Other"
   ],
   "activationEvents": [],
-  "main": "./dist/index.js",
+  "main": "./out/index.js",
   "contributes": {
     "commands": [
       {
@@ -37,6 +41,8 @@
   "scripts": {
     "lint": "eslint .",
     "build": "node -r @swc-node/register scripts/build.ts",
+    "vscode:prepublish": "yarn build",
+    "pub": "vsce package -t win32-x64 -o out",
     "test": "mocha -r @swc-node/register --extensions ts --watch --watch-files src 'tests/**/*.test.ts'",
     "testci": "mocha -r @swc-node/register --extensions ts 'tests/**/*.test.ts'"
   },
@@ -55,6 +61,7 @@
     "@typescript-eslint/eslint-plugin": "^6.1.0",
     "@typescript-eslint/parser": "^6.1.0",
     "@vscode/test-electron": "^2.3.3",
+    "@vscode/vsce": "^2.19.0",
     "chai": "^4.3.7",
     "esbuild": "^0.18.15",
     "eslint": "^8.45.0",

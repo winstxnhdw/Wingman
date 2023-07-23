@@ -2,7 +2,7 @@ import { build } from 'esbuild'
 import { mkdir, rm } from 'fs/promises'
 import { argv } from 'process'
 
-const build_directory = 'dist'
+const build_directory = 'out'
 const external_modules = ['vscode'] as string[]
 
 async function main(args: string[]) {
