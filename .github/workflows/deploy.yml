@@ -5,6 +5,7 @@ on:
     workflows: [Build]
     types: [completed]
   push:
+    branches: [main]
     paths:
       - '**.py'
       - '**.ts'
