@@ -14,9 +14,6 @@ on:
       - pyproject.toml
       - main.spec
 
-permissions:
-  contents: write
-
 jobs:
   build:
     uses: winstxnhdw/Wingman/.github/workflows/main.yml@main
@@ -24,6 +21,8 @@ jobs:
   deploy:
     needs: build
     runs-on: windows-latest
+    permissions:
+        contents: write
 
     steps:
       - name: Checkout repository
@@ -55,3 +54,14 @@ jobs:
 
       - name: Build
         run: poetry run python scripts/build.py
+
+      - name: Release executable
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_TAG: latest
+          RELEASE_TITLE: Wingman
+          RELEASE_ASSET: dist/wingman.exe
+        run: |
+          gh release delete ${{ env.RELEASE_TAG }} -y || true
+          gh release create ${{ env.RELEASE_TAG }} -t '${{ env.RELEASE_TITLE }}' || true
+          gh release upload ${{ env.RELEASE_TAG }} ${{ env.RELEASE_ASSET }} --clobber
