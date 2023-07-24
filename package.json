@@ -42,7 +42,7 @@
     "lint": "eslint .",
     "build": "node -r @swc-node/register scripts/build.ts",
     "vscode:prepublish": "yarn build",
-    "pub": "vsce package -t win32-x64 -o out/wingman.vsix",
+    "package": "vsce package -t win32-x64 -o out/wingman.vsix",
     "test": "mocha -r @swc-node/register --extensions ts --watch --watch-files src 'tests/**/*.test.ts'",
     "testci": "mocha -r @swc-node/register --extensions ts 'tests/**/*.test.ts'"
   },
