@@ -9,6 +9,7 @@ on:
       - package.json
       - tsconfig.json
       - pyproject.toml
+      - main.spec
 
 permissions:
   contents: write
