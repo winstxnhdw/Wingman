@@ -1,0 +1,57 @@
+name: Deploy
+
+on:
+  workflow_run:
+    workflows: [Build]
+    types: [completed]
+  push:
+    paths:
+      - '**.py'
+      - '**.ts'
+      - .github/workflows/main.yml
+      - package.json
+      - tsconfig.json
+      - pyproject.toml
+      - main.spec
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    uses: winstxnhdw/Wingman/.github/workflows/main.yml@main
+
+  deploy:
+    needs: build
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Install Poetry
+        run: pipx install poetry
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+            python-version: 3.11
+            cache: poetry
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+            node-version: latest
+            cache: yarn
+
+      - name: Install node dependencies
+        run: yarn --frozen-lockfile
+
+      - name: Package extension
+        run: yarn package
+
+      - name: Install Python dependencies
+        run: poetry install
+
+      - name: Build
+        run: poetry run python scripts/build.py

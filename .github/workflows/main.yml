@@ -1,18 +1,7 @@
-name: Deploy
+name: Build
 
 on:
-  push:
-    paths:
-      - '**.py'
-      - '**.ts'
-      - .github/workflows/main.yml
-      - package.json
-      - tsconfig.json
-      - pyproject.toml
-      - main.spec
-
-permissions:
-  contents: write
+  workflow_call:
 
 jobs:
   extension:
@@ -34,17 +23,11 @@ jobs:
       - name: Lint extension
         run: yarn lint
 
-      - name: Package extension
-        run: yarn pack
-
-      - name: Upload extension
-        uses: actions/upload-artifact@v3
-        with:
-          name: wingman.vsix
-          path: dist/wingman.vsix
+      - name: Build extension
+        run: yarn build
 
   server:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
@@ -63,39 +46,13 @@ jobs:
         run: poetry install
 
       - name: Lint
-        run: poetry run pylint (& git ls-files '*.py')
+        run: poetry run pylint $(git ls-files '*.py')
 
       - name: Type Check
         run: poetry run pyright
 
-  deploy:
-    needs: [extension, server]
-    runs-on: windows-latest
-
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-
-      - name: Download extension
-        uses: actions/download-artifact@v3
-        with:
-          name: wingman.vsix
-          path: dist/
-
-      - name: Install Poetry
-        run: pipx install poetry
-
-      - name: Setup Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: 3.11
-          cache: poetry
-
-      - name: Install Python dependencies
-        run: poetry install
-
-      - name: Build
-        run: poetry run python scripts/build.py
+      - name: Download the model
+        run: poetry run python scripts/download_model.py
 
       - name: Test
         run: poetry run pytest

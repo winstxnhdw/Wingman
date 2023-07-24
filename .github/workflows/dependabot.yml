@@ -1,38 +1,14 @@
 name: Dependabot
 
-on: pull_request
+on:
+  pull_request:
+  workflow_run:
+    workflows: [Build]
+    types: [completed]
 
 jobs:
   build:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-
-      - name: Install Poetry
-        run: pipx install poetry
-
-      - name: Setup Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: 3.11
-          cache: poetry
-
-      - name: Install Python dependencies
-        run: poetry install
-
-      - name: Run linter
-        run: poetry run pylint $(git ls-files '*.py')
-
-      - name: Run type checker
-        run: poetry run pyright
-
-      - name: Build
-        run: poetry run python scripts/build.py
-
-      - name: Run tests
-        run: poetry run pytest
+    uses: winstxnhdw/Wingman/.github/workflows/main.yml@main
 
   auto-merge:
     needs: build
