@@ -34,8 +34,14 @@ jobs:
       - name: Lint extension
         run: yarn lint
 
-      - name: Build extension
-        run: yarn build
+      - name: Package extension
+        run: yarn pack
+
+      - name: Upload extension
+        uses: actions/upload-artifact@v3
+        with:
+          name: wingman.vsix
+          path: dist/wingman.vsix
 
   server:
     runs-on: windows-latest
@@ -62,9 +68,34 @@ jobs:
       - name: Type Check
         run: poetry run pyright
 
+  deploy:
+    needs: [extension, server]
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Download extension
+        uses: actions/download-artifact@v3
+        with:
+          name: wingman.vsix
+          path: dist/
+
+      - name: Install Poetry
+        run: pipx install poetry
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.11
+          cache: poetry
+
+      - name: Install Python dependencies
+        run: poetry install
+
       - name: Build
         run: poetry run python scripts/build.py
 
       - name: Test
         run: poetry run pytest
-
