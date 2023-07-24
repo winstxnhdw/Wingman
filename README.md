@@ -45,10 +45,10 @@ poetry install
 
 ### Build
 
-Minify and bundle the Node application with [esbuild](https://esbuild.github.io/).
+Minify, bundle and package the extension.
 
 ```bash
-yarn build
+yarn package
 ```
 
 Human-readable bundle of your Node application. For debugging purposes.
