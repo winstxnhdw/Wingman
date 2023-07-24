@@ -43,6 +43,12 @@ Install all server dependencies.
 poetry install
 ```
 
+Download the model.
+
+```bash
+python scripts/download_model.py
+```
+
 ### Build
 
 Minify, bundle and package the extension.
