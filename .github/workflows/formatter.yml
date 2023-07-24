@@ -30,8 +30,8 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-            node-version: latest
-            cache: yarn
+          node-version: latest
+          cache: yarn
 
       - name: Sort imports
         uses: isort/isort-action@master
