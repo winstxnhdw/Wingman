@@ -54,7 +54,7 @@ class Generator:
 
         stream = cls.llm._stream(  # pylint: disable=protected-access
             formatted_prompt,
-            **cls.generator_config._asdict()
+            **cls.generator_config
         )
 
         return ''.join(stream)

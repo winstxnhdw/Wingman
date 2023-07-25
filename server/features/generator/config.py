@@ -1,7 +1,7 @@
-from typing import NamedTuple
+from typing import TypedDict
 
 
-class GeneratorConfig(NamedTuple):
+class GeneratorConfig(TypedDict, total=False):
     """
     Summary
     -------
@@ -21,14 +21,14 @@ class GeneratorConfig(NamedTuple):
     batch_size (int) : the batch size to use for evaluating tokens
     threads (int) : the number of threads to use for evaluating tokens
     """
-    top_k: int = 40
-    top_p: float = 0.95
-    temperature: float = 0.8
-    repetition_penalty: float = 1.1
-    last_n_tokens: int = 64
-    seed: int = -1
-    max_new_tokens: int = 256
-    stop: list[str] | None = None
-    reset: bool = True
-    batch_size: int = 8
-    threads: int = -1
+    top_k: int
+    top_p: float
+    temperature: float
+    repetition_penalty: float
+    last_n_tokens: int
+    seed: int
+    max_new_tokens: int
+    stop: list[str] | None
+    reset: bool
+    batch_size: int
+    threads: int
