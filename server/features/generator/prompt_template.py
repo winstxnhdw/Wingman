@@ -18,6 +18,8 @@ class PromptTemplate:
     format_prompt(prompt: str) -> str:
         format a prompt
     """
+    __slots__ = ('template',)
+
     def __init__(self, template_name: Literal['main']):
 
         template_path = normalise_path(f'server/features/generator/templates/{template_name}.txt')
