@@ -3,6 +3,7 @@
 [![deploy.yml](https://github.com/winstxnhdw/Wingman/actions/workflows/deploy.yml/badge.svg)](https://github.com/winstxnhdw/Wingman/actions/workflows/deploy.yml)
 [![formatter.yml](https://github.com/winstxnhdw/Wingman/actions/workflows/formatter.yml/badge.svg)](https://github.com/winstxnhdw/Wingman/actions/workflows/formatter.yml)
 [![dependabot.yml](https://github.com/winstxnhdw/Wingman/actions/workflows/dependabot.yml/badge.svg)](https://github.com/winstxnhdw/Wingman/actions/workflows/dependabot.yml)
+[![CodeQL](https://github.com/winstxnhdw/Wingman/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/winstxnhdw/Wingman/actions/workflows/github-code-scanning/codeql)
 
 <p align="center"><b>Monorepo for Wingman</b></p>
 
