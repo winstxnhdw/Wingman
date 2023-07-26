@@ -7,6 +7,11 @@
 
 <p align="center"><b>Monorepo for Wingman</b></p>
 
+<div align="center">
+    <img src="resources/wingman_transparent.png" />
+</div>
+
+
 > [!NOTE]\
 > Did you know that the **Win** in **Win**gman stands for **Win**dows?
 
