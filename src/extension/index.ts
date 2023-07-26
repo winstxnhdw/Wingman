@@ -49,7 +49,13 @@ export class Extension implements Disposable {
     const text_before_cursor = document.getText(range_before_cursor)
 
     const prompt = this.format_suggestion_prompt(text_before_cursor)
-    const response = await this.api.generate_text(prompt)
+
+    const response = await window.withProgress(this.progress_options, async (progress) => {
+      progress.report({ increment: 0 })
+      const response = await this.api.generate_text(prompt)
+      progress.report({ increment: 100 })
+      return response
+    })
 
     await active_editor.edit((edit_builder) => edit_builder.insert(cursor_position, response.text))
   }
