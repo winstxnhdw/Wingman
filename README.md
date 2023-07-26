@@ -7,6 +7,7 @@
 
 <p align="center"><b>Monorepo for Wingman</b></p>
 
+> [!NOTE]\
 > Did you know that the **Win** in **Win**gman stands for **Win**dows?
 
 `Wingman` is a **fast CPU-first offline AI pair programmer** for [Visual Studio Code](https://code.visualstudio.com/) on Windows. `Wingman` comes with a self-contained [FastAPI](https://fastapi.tiangolo.com/) server that leverages the fast inference speeds of [ctransformers](https://github.com/marella/ctransformers) and a lightweight 4-bit quantised model to provide a seamless pair programming experience on low-end machines. You may find the used model [here](https://huggingface.co/winstxnhdw/Replit-v2-CodeInstruct-3B-ggml-4bit).
@@ -18,6 +19,13 @@
 - No GPU required
 - Self-contained
 - Fast
+
+## Usage
+
+> [!IMPORTANT]\
+> Ensure that Visual Studio Code has already been installed.
+
+You can download the portable executable [here](https://github.com/winstxnhdw/Wingman/releases/tag/latest).
 
 ## Development
 
