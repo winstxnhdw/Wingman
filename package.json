@@ -2,6 +2,7 @@
   "name": "wingman",
   "displayName": "Wingman",
   "description": "An offline AI pair programmer.",
+  "icon": "resources/wingman_logo.png",
   "repository": {
     "type": "git",
     "url": "https://github.com/winstxnhdw/Wingman"
