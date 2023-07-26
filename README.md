@@ -96,3 +96,7 @@ Test the server.
 ```bash
 pytest
 ```
+
+## Credits
+
+A special thank you to [Alyssa](https://github.com/alyssaxchua) for the amazing extension logo and banner!
