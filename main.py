@@ -10,11 +10,10 @@ def main():
     -------
     exhaust the initialise generator and run the server
     """
-
-    with Popen(['code', '--install-extension', normalise_path('out/wingman.vsix')]) as _:
-        pass
-
     try:
+        with Popen(['code', '--install-extension', normalise_path('out/wingman.vsix')]) as _:
+            pass
+
         for _ in initialise():
             pass
 
