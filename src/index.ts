@@ -10,5 +10,8 @@ export function activate(context: ExtensionContext) {
     register_command('suggest', async () => {
       await extension.generate_text()
     }),
+    register_command('fix', async () => {
+      await extension.fix_code()
+    }),
   )
 }

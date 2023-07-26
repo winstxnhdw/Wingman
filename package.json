@@ -20,6 +20,16 @@
       {
         "command": "wingman.suggest",
         "title": "Wingman: Suggest Code"
+      },
+      {
+        "command": "wingman.fix",
+        "title": "Wingman: Fix Code"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "wingman.fix",
+        "key": "ctrl+shift+space"
       }
     ],
     "configuration": {
