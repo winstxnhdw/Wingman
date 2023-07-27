@@ -3,7 +3,7 @@ import { mkdir, rm } from 'fs/promises'
 import { argv } from 'process'
 
 const build_directory = 'out'
-const external_modules = ['vscode'] as string[]
+const external_modules = ['vscode']
 
 async function main(args: string[]) {
   await rm(build_directory, { recursive: true, force: true })
