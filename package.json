@@ -76,7 +76,7 @@
     "chai": "^4.3.7",
     "esbuild": "^0.18.17",
     "eslint": "^8.45.0",
-    "eslint-config-prettier": "^8.8.0",
+    "eslint-config-prettier": "^8.9.0",
     "glob": "^10.3.3",
     "mocha": "^10.2.0",
     "prettier": "^3.0.0",
