@@ -35,7 +35,7 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = ">=3.11, <3.13"
-ctransformers = "^0.2.14"
+ctransformers = "^0.2.16"
 transformers = "^4.31.0"
 fastapi = "^0.100.1"
 hypercorn = "^0.14.4"
