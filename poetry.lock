@@ -165,13 +165,13 @@ files = [
 
 [[package]]
 name = "ctransformers"
-version = "0.2.16"
+version = "0.2.17"
 description = "Python bindings for the Transformer models implemented in C/C++ using GGML library."
 optional = false
 python-versions = "*"
 files = [
-    {file = "ctransformers-0.2.16-py3-none-any.whl", hash = "sha256:d872c2f7272dd61b8a1a7e07d0b34e5bd3868293724697a2aa2bdf7fcb18c03a"},
-    {file = "ctransformers-0.2.16.tar.gz", hash = "sha256:27df2d0dbdc8036f208a5c395934b87273a6a4f66ece9f9a57927def0f4c9a5c"},
+    {file = "ctransformers-0.2.17-py3-none-any.whl", hash = "sha256:903c16b38f5b2750ee34b90107c3a72351d7a9a201a6987a6560bd50874e9698"},
+    {file = "ctransformers-0.2.17.tar.gz", hash = "sha256:0c9de34cc8295ba6cb940e413130e6658fac54a99cecfa6098ac04638fd9301e"},
 ]
 
 [package.dependencies]
@@ -1445,4 +1445,4 @@ h11 = ">=0.9.0,<1"
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.11, <3.13"
-content-hash = "50564c9af6369e6f09adee9ffbd194e798ac3fced2b7e9edb5ddcbb955b1e405"
+content-hash = "19214ce2a2fc754d2ac50a129a2cdfdf37097fd3102e45183420615482a32ec3"
