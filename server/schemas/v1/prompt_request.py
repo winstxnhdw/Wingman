@@ -11,4 +11,4 @@ class PromptRequest(BaseModel):
     ----------
     prompt (str) : the prompt to generate from
     """
-    prompt: str = Field(examples=["def fibonacci(n: int) -> int:\n    "])
+    prompt: str = Field(examples=['def fibonacci(n: int) -> int:\n    '])

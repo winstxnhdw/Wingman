@@ -13,6 +13,6 @@ class PromptResponse(BaseModel):
     """
     text: str = Field(
         examples=[
-            "def fibonacci(n: int) -> int:\n    if (n == 1):\n      return 1\n    return fibonacci(n- 1) + fibonacci(n - 2)"
+            'def fibonacci(n: int) -> int:\n    if (n == 1):\n      return 1\n    return fibonacci(n- 1) + fibonacci(n - 2)'
         ]
     )

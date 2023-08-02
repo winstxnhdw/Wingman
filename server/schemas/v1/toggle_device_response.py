@@ -18,7 +18,7 @@ class ToggleDeviceResponse(BaseModel):
 
     message: str = Field(
         examples=[
-            "Device toggled to CPU successfully!",
-            "Device toggled to CUDA successfully!"
+            'Device toggled to CPU successfully!',
+            'Device toggled to CUDA successfully!'
         ]
     )
