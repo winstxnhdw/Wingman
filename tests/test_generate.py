@@ -13,7 +13,7 @@ def client():
 
 def test_generate(client: TestClient):
     response = client.post('/v1/generate', json={
-        'prompt': 'Create a Python function that returns the sum of two numbers'
+        'prompt': 'def fibonacci(n: int) -> int:\n    '
     }).json()
 
     assert "def" in response['text']
