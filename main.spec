@@ -8,12 +8,8 @@ block_cipher = None
 
 analysis = Analysis(
     ['main.py'],
-    binaries = [
-        (join(getsitepackages()[-1], 'ctransformers'), 'ctransformers')
-    ],
     datas = [
         ('bin', 'bin'),
-        ('server\\features\\generator\\templates\\main.txt', 'server\\features\\generator\\templates'),
         ('out\\wingman.vsix', 'out')
     ],
     pathex = [],

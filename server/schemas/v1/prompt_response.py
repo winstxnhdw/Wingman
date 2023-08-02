@@ -11,4 +11,8 @@ class PromptResponse(BaseModel):
     ----------
     text (str) : the response to the prompt
     """
-    text: str = Field(examples=["Create a Python function that returns the sum of two numbers"])
+    text: str = Field(
+        examples=[
+            "def fibonacci(n: int) -> int:\n    if (n == 1):\n      return 1\n    return fibonacci(n- 1) + fibonacci(n - 2)"
+        ]
+    )

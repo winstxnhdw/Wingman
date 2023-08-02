@@ -1,4 +1,4 @@
-from huggingface_hub import hf_hub_download
+from huggingface_hub import snapshot_download
 
 
 def download_model():
@@ -7,9 +7,8 @@ def download_model():
     -------
     download the model from Huggingface Hub
     """
-    hf_hub_download(
-        'winstxnhdw/Replit-v2-CodeInstruct-3B-ggml-4bit',
-        'model.bin',
+    snapshot_download(
+        'winstxnhdw/replit-code-v1-3b-ct2-int8',
         local_dir='bin',
         local_dir_use_symlinks=False
     )

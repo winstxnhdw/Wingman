@@ -8,6 +8,7 @@ from hypercorn.asyncio import serve
 from server.api import v1
 from server.api.v1 import generate as generate
 from server.api.v1 import index as index
+from server.api.v1 import toggle_device as toggle_device
 from server.config import Config
 
 

@@ -1,7 +1,8 @@
-from ctransformers import AutoModelForCausalLM
+from typing import Literal
 
-from server.features.generator.config import GeneratorConfig
-from server.features.generator.prompt_template import PromptTemplate
+from ctranslate2 import Generator as CTranslateGenerator
+from transformers import AutoTokenizer
+
 from server.helpers import normalise_path
 
 
@@ -13,27 +14,20 @@ class Generator:
 
     Attributes
     ----------
-    llm (LLM) : the language model instance
+    generator (Generator) : the CTranslate2 generator
+    tokeniser (AutoTokenizer) : the HuggingFace tokeniser
 
     Methods
     -------
     generate(prompt: str) -> str:
         generate text from a prompt
+
+    toggle_device():
+        toggle between `cpu` and `cuda` devices
     """
     model_path = normalise_path('bin')
-    prompt_template = PromptTemplate('main')
-    llm = AutoModelForCausalLM.from_pretrained(model_path, model_type="replit")
-
-    generator_config = GeneratorConfig(
-        top_k=50,
-        top_p=0.9,
-        temperature=0.2,
-        repetition_penalty=1.0,
-        max_new_tokens=512,
-        seed=42,
-        stop=["<|endoftext|>"],
-        reset=True
-    )
+    generator = CTranslateGenerator(model_path, compute_type='auto')
+    tokeniser = AutoTokenizer.from_pretrained(model_path, trust_remote_code=True)
 
     @classmethod
     def generate(cls, prompt: str) -> str:
@@ -50,11 +44,24 @@ class Generator:
         -------
         generated_text (str) : the generated text
         """
-        formatted_prompt = cls.prompt_template.format_prompt(prompt)
+        if isinstance(tokens := cls.tokeniser.convert_ids_to_tokens(cls.tokeniser.encode(prompt)), str):
+            tokens = [tokens]
 
-        stream = cls.llm._stream(  # pylint: disable=protected-access
-            formatted_prompt,
-            **cls.generator_config
-        )
+        results = cls.generator.generate_batch([tokens], max_length=100, sampling_topk=10)
 
-        return ''.join(stream)
+        return cls.tokeniser.decode(results[0].sequences_ids[0])
+
+
+    @classmethod
+    def toggle_device(cls) -> Literal['cpu', 'cuda', 'auto']:
+        """
+        Summary
+        -------
+        toggle between `cpu` and `cuda` devices
+
+        Returns
+        -------
+        device (Devices) : the device that the generator is now using
+        """
+        cls.generator = CTranslateGenerator(cls.model_path, device='cuda' if cls.generator.device == 'cpu' else 'cpu')
+        return cls.generator.device
