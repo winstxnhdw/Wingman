@@ -347,20 +347,20 @@
   resolved "https://registry.yarnpkg.com/@types/mocha/-/mocha-10.0.1.tgz#2f4f65bb08bc368ac39c96da7b2f09140b26851b"
   integrity sha512-/fvYntiO1GeICvqbQ3doGDIP97vWmvFt83GKguJ6prmQM2iXZfFcq6YE8KteFyRtX2/h5Hf91BYvPodJKFYv5Q==
 
-"@types/node@*", "@types/node@^20.4.6":
-  version "20.4.6"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-20.4.6.tgz#b66b66c9bb5d49b199f03399e341c9d6036e9e88"
-  integrity sha512-q0RkvNgMweWWIvSMDiXhflGUKMdIxBo2M2tYM/0kEGDueQByFzK4KZAgu5YHGFNxziTlppNpTIBcqHQAxlfHdA==
+"@types/node@*", "@types/node@^20.4.7":
+  version "20.4.7"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-20.4.7.tgz#74d323a93f1391a63477b27b9aec56669c98b2ab"
+  integrity sha512-bUBrPjEry2QUTsnuEjzjbS7voGWCc30W0qzgMf90GPeDGFRakvrz47ju+oqDAKCXLUCe39u57/ORMl/O/04/9g==
 
 "@types/semver@^7.5.0":
   version "7.5.0"
   resolved "https://registry.yarnpkg.com/@types/semver/-/semver-7.5.0.tgz#591c1ce3a702c45ee15f47a42ade72c2fd78978a"
   integrity sha512-G8hZ6XJiHnuhQKR7ZmysCeJWE08o8T0AXtk5darsCaTVsYZhhgUrq53jizaR2FvsoeCwJhlmwTjkXBY5Pn/ZHw==
 
-"@types/vscode@^1.80.0":
-  version "1.80.0"
-  resolved "https://registry.yarnpkg.com/@types/vscode/-/vscode-1.80.0.tgz#e004dd6cde74dafdb7fab64a6e1754bf8165b981"
-  integrity sha512-qK/CmOdS2o7ry3k6YqU4zD3R2AYlJfbwBoSbKpBoP+GpXNE+0NEgJOli4n0bm0diK5kfBnchgCEj4igQz/44Hg==
+"@types/vscode@^1.81.0":
+  version "1.81.0"
+  resolved "https://registry.yarnpkg.com/@types/vscode/-/vscode-1.81.0.tgz#c27228dd063002e0e00611be70b0497beaa24d39"
+  integrity sha512-YIaCwpT+O2E7WOMq0eCgBEABE++SX3Yl/O02GoMIF2DO3qAtvw7m6BXFYsxnc6XyzwZgh6/s/UG78LSSombl2w==
 
 "@typescript-eslint/eslint-plugin@^6.2.1":
   version "6.2.1"
