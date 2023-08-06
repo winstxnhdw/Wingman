@@ -1,5 +1,6 @@
 # Wingman
 
+[![linting: pylint](https://img.shields.io/badge/linting-pylint-yellowgreen)](https://github.com/PyCQA/pylint)
 [![deploy.yml](https://github.com/winstxnhdw/Wingman/actions/workflows/deploy.yml/badge.svg)](https://github.com/winstxnhdw/Wingman/actions/workflows/deploy.yml)
 [![formatter.yml](https://github.com/winstxnhdw/Wingman/actions/workflows/formatter.yml/badge.svg)](https://github.com/winstxnhdw/Wingman/actions/workflows/formatter.yml)
 [![dependabot.yml](https://github.com/winstxnhdw/Wingman/actions/workflows/dependabot.yml/badge.svg)](https://github.com/winstxnhdw/Wingman/actions/workflows/dependabot.yml)
