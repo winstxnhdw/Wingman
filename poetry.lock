@@ -165,13 +165,13 @@ files = [
 
 [[package]]
 name = "ctransformers"
-version = "0.2.18"
+version = "0.2.20"
 description = "Python bindings for the Transformer models implemented in C/C++ using GGML library."
 optional = false
 python-versions = "*"
 files = [
-    {file = "ctransformers-0.2.18-py3-none-any.whl", hash = "sha256:6d693e269d797f2485c86c9e8a322acb1464e782bf22547ec57e09d4ccbb4523"},
-    {file = "ctransformers-0.2.18.tar.gz", hash = "sha256:fc09c399baf16d99dd44aa6671d49aa4060d8904324c2527aa58e8831476c370"},
+    {file = "ctransformers-0.2.20-py3-none-any.whl", hash = "sha256:206eef4b137686bf79e2193c2d243783bfe2f60f98043affbfd322d8e140be21"},
+    {file = "ctransformers-0.2.20.tar.gz", hash = "sha256:9cf29fee4a10f07f4c7e92e7542681f176ca0454c600cc1228c28fe78fd833a8"},
 ]
 
 [package.dependencies]
@@ -198,17 +198,17 @@ graph = ["objgraph (>=1.7.2)"]
 
 [[package]]
 name = "fastapi"
-version = "0.100.1"
+version = "0.101.0"
 description = "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "fastapi-0.100.1-py3-none-any.whl", hash = "sha256:ec6dd52bfc4eff3063cfcd0713b43c87640fefb2687bbbe3d8a08d94049cdf32"},
-    {file = "fastapi-0.100.1.tar.gz", hash = "sha256:522700d7a469e4a973d92321ab93312448fbe20fca9c8da97effc7e7bc56df23"},
+    {file = "fastapi-0.101.0-py3-none-any.whl", hash = "sha256:494eb3494d89e8079c20859d7ca695f66eaccc40f46fe8c75ab6186d15f05ffd"},
+    {file = "fastapi-0.101.0.tar.gz", hash = "sha256:ca2ae65fe42f6a34b5cf6c994337149154b1b400c39809d7b2dccdceb5ae77af"},
 ]
 
 [package.dependencies]
-pydantic = ">=1.7.4,<1.8 || >1.8,<1.8.1 || >1.8.1,<2.0.0 || >2.0.0,<2.0.1 || >2.0.1,<3.0.0"
+pydantic = ">=1.7.4,<1.8 || >1.8,<1.8.1 || >1.8.1,<2.0.0 || >2.0.0,<2.0.1 || >2.0.1,<2.1.0 || >2.1.0,<3.0.0"
 starlette = ">=0.27.0,<0.28.0"
 typing-extensions = ">=4.5.0"
 
@@ -1446,4 +1446,4 @@ h11 = ">=0.9.0,<1"
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.11, <3.13"
-content-hash = "8fcd035db7223bb8f03a7a9f748815fa2572e4b60542dcf1221fc278de74c26b"
+content-hash = "724a9ed05b5d987cd8996cf60fd7d94367176103eafe94b731e8bf741d582790"
