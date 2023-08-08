@@ -165,13 +165,13 @@ files = [
 
 [[package]]
 name = "ctransformers"
-version = "0.2.20"
+version = "0.2.21"
 description = "Python bindings for the Transformer models implemented in C/C++ using GGML library."
 optional = false
 python-versions = "*"
 files = [
-    {file = "ctransformers-0.2.20-py3-none-any.whl", hash = "sha256:206eef4b137686bf79e2193c2d243783bfe2f60f98043affbfd322d8e140be21"},
-    {file = "ctransformers-0.2.20.tar.gz", hash = "sha256:9cf29fee4a10f07f4c7e92e7542681f176ca0454c600cc1228c28fe78fd833a8"},
+    {file = "ctransformers-0.2.21-py3-none-any.whl", hash = "sha256:18a0555d02f55a3935f5544b885038562f80e497a6197d8e871941a087dba546"},
+    {file = "ctransformers-0.2.21.tar.gz", hash = "sha256:58e7a699050a106688b967faa59f377886e22a581fde6cd36821dfa541995677"},
 ]
 
 [package.dependencies]
@@ -179,6 +179,7 @@ huggingface-hub = "*"
 py-cpuinfo = ">=9.0.0,<10.0.0"
 
 [package.extras]
+cuda = ["nvidia-cublas-cu12", "nvidia-cuda-runtime-cu12"]
 gptq = ["exllama (==0.1.0)"]
 tests = ["pytest"]
 
@@ -1446,4 +1447,4 @@ h11 = ">=0.9.0,<1"
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.11, <3.13"
-content-hash = "724a9ed05b5d987cd8996cf60fd7d94367176103eafe94b731e8bf741d582790"
+content-hash = "8c85a374e25718230fd71cb875491fe0563b8beff3e48ec2376d243aeda624f4"
