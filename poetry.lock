@@ -165,13 +165,13 @@ files = [
 
 [[package]]
 name = "ctransformers"
-version = "0.2.21"
+version = "0.2.22"
 description = "Python bindings for the Transformer models implemented in C/C++ using GGML library."
 optional = false
 python-versions = "*"
 files = [
-    {file = "ctransformers-0.2.21-py3-none-any.whl", hash = "sha256:18a0555d02f55a3935f5544b885038562f80e497a6197d8e871941a087dba546"},
-    {file = "ctransformers-0.2.21.tar.gz", hash = "sha256:58e7a699050a106688b967faa59f377886e22a581fde6cd36821dfa541995677"},
+    {file = "ctransformers-0.2.22-py3-none-any.whl", hash = "sha256:cce72b4ffff3f29d49ea6488110686453b3354c285e96b9c7dd16f273c4b4fc4"},
+    {file = "ctransformers-0.2.22.tar.gz", hash = "sha256:ffd15dfe8a6ad45568ac0423bbbb13d7d71b680a7d0b59871a193df8a4b8fdca"},
 ]
 
 [package.dependencies]
@@ -199,13 +199,13 @@ graph = ["objgraph (>=1.7.2)"]
 
 [[package]]
 name = "fastapi"
-version = "0.101.0"
+version = "0.101.1"
 description = "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "fastapi-0.101.0-py3-none-any.whl", hash = "sha256:494eb3494d89e8079c20859d7ca695f66eaccc40f46fe8c75ab6186d15f05ffd"},
-    {file = "fastapi-0.101.0.tar.gz", hash = "sha256:ca2ae65fe42f6a34b5cf6c994337149154b1b400c39809d7b2dccdceb5ae77af"},
+    {file = "fastapi-0.101.1-py3-none-any.whl", hash = "sha256:aef5f8676eb1b8389952e1fe734abe20f04b71f6936afcc53b320ba79b686a4b"},
+    {file = "fastapi-0.101.1.tar.gz", hash = "sha256:7b32000d14ca9992f7461117b81e4ef9ff0c07936af641b4fe40e67d5f9d63cb"},
 ]
 
 [package.dependencies]
@@ -846,13 +846,13 @@ testutils = ["gitpython (>3)"]
 
 [[package]]
 name = "pyright"
-version = "1.1.321"
+version = "1.1.322"
 description = "Command line wrapper for pyright"
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "pyright-1.1.321-py3-none-any.whl", hash = "sha256:bc8ca2001b9f19b1cf75eb5ace71d833f9266b3981a5d88dac3b9bbcff8d9281"},
-    {file = "pyright-1.1.321.tar.gz", hash = "sha256:f62d54fac611138a407bb302103700eeb37a147ce1a6e915148be9ca5961572a"},
+    {file = "pyright-1.1.322-py3-none-any.whl", hash = "sha256:1bcddb55c4fca5d3c86eee71db0e8aad80536527f2084284998c6cbceda10e4e"},
+    {file = "pyright-1.1.322.tar.gz", hash = "sha256:c8299d8b5d8c6e6f6ea48a77bf330a6df79e23305d21d25043bba8a23c1e1ed8"},
 ]
 
 [package.dependencies]
@@ -1447,4 +1447,4 @@ h11 = ">=0.9.0,<1"
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.11, <3.13"
-content-hash = "4a63a69c6e77d59d355b9ded04eb85f8b9abdae944009d940ad455e55070585c"
+content-hash = "c8b325e9b31c8ef980547e869d6846fe4dd4db66c4a26b1c555d28d834eb578f"
