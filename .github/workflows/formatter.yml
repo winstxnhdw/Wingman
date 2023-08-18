@@ -27,11 +27,10 @@ jobs:
         with:
           python-version: 3.11
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v1
         with:
-          node-version: latest
-          cache: yarn
+          bun-version: latest
 
       - name: Sort imports
         uses: isort/isort-action@master
@@ -39,13 +38,13 @@ jobs:
           configuration: --atomic
 
       - name: Install node dependencies
-        run: yarn --frozen-lockfile
+        run: bun install --frozen-lockfile
 
       - name: Fix lints
-        run: yarn lint --fix
+        run: bun run lint --fix
 
       - name: Format with Prettier
-        run: yarn prettier --write src
+        run: bun run prettier --write src
 
       - name: Set Git config
         run: |

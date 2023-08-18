@@ -39,17 +39,16 @@ jobs:
           python-version: 3.11
           cache: poetry
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v1
         with:
-          node-version: latest
-          cache: yarn
+          bun-version: latest
 
       - name: Install node dependencies
-        run: yarn --frozen-lockfile
+        run: bun install --frozen-lockfile
 
       - name: Package extension
-        run: yarn package
+        run: bun run package
 
       - name: Install Python dependencies
         run: poetry install
