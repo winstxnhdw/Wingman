@@ -165,13 +165,13 @@ files = [
 
 [[package]]
 name = "ctransformers"
-version = "0.2.25"
+version = "0.2.26"
 description = "Python bindings for the Transformer models implemented in C/C++ using GGML library."
 optional = false
 python-versions = "*"
 files = [
-    {file = "ctransformers-0.2.25-py3-none-any.whl", hash = "sha256:a97405373c61c8d8f0279b88f96543caec638773a4fe82ff2ed8d993844830f1"},
-    {file = "ctransformers-0.2.25.tar.gz", hash = "sha256:59d654a4be8a51f0c5b7976d8d39a1e410f5e808f8cdabad02da4957001053d8"},
+    {file = "ctransformers-0.2.26-py3-none-any.whl", hash = "sha256:7d1769e16c62e8105ba162cc04151b53953a7f959117766b3da614ec74cfbb37"},
+    {file = "ctransformers-0.2.26.tar.gz", hash = "sha256:95a4d97c9ff33a78f7db6dc1186ee9a8be50c3cc3a73c1f667cba6255e260e7a"},
 ]
 
 [package.dependencies]
@@ -846,13 +846,13 @@ testutils = ["gitpython (>3)"]
 
 [[package]]
 name = "pyright"
-version = "1.1.324"
+version = "1.1.325"
 description = "Command line wrapper for pyright"
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "pyright-1.1.324-py3-none-any.whl", hash = "sha256:0edb712afbbad474e347de12ca1bd9368aa85d3365a1c7b795012e48e6a65111"},
-    {file = "pyright-1.1.324.tar.gz", hash = "sha256:0c48e3bca3d081bba0dddd0c1f075aaa965c59bba691f7b9bd9d73a98e44e0cf"},
+    {file = "pyright-1.1.325-py3-none-any.whl", hash = "sha256:8f3ab88ba4843f053ab5b5c886d676161aba6f446776bfb57cc0434ed4d88672"},
+    {file = "pyright-1.1.325.tar.gz", hash = "sha256:879a3f66944ffd59d3facd54872fed814830fed64daf3e8eb71b146ddd83bb67"},
 ]
 
 [package.dependencies]
@@ -1457,4 +1457,4 @@ h11 = ">=0.9.0,<1"
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.11, <3.13"
-content-hash = "ea871ccd28b354e69e64b7cb1e7309c8bd63c353ed014a78f656940a8ea66539"
+content-hash = "43dcae4f31dbc330ae08e4fb95d3d3f654b167d8bb799b7bea7bb92aa71a3b7e"
