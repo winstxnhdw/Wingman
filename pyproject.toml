@@ -35,11 +35,11 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = ">=3.11, <3.13"
-ctransformers = "^0.2.26"
+ctransformers = "^0.2.27"
 transformers = "^4.33.1"
 fastapi = "^0.103.1"
 hypercorn = "^0.14.4"
-httpx = "^0.24.1"
+httpx = "^0.25.0"
 
 [tool.poetry.group.dev.dependencies]
 pyinstaller = "^5.13.2"
