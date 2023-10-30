@@ -195,13 +195,13 @@ graph = ["objgraph (>=1.7.2)"]
 
 [[package]]
 name = "fastapi"
-version = "0.104.0"
+version = "0.104.1"
 description = "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "fastapi-0.104.0-py3-none-any.whl", hash = "sha256:456482c1178fb7beb2814b88e1885bc49f9a81f079665016feffe3e1c6a7663e"},
-    {file = "fastapi-0.104.0.tar.gz", hash = "sha256:9c44de45693ae037b0c6914727a29c49a40668432b67c859a87851fc6a7b74c6"},
+    {file = "fastapi-0.104.1-py3-none-any.whl", hash = "sha256:752dc31160cdbd0436bb93bad51560b57e525cbb1d4bbf6f4904ceee75548241"},
+    {file = "fastapi-0.104.1.tar.gz", hash = "sha256:e5e4540a7c5e1dcfbbcf5b903c234feddcdcd881f191977a1c5dfd917487e7ae"},
 ]
 
 [package.dependencies]
@@ -378,13 +378,13 @@ typing = ["pydantic", "types-PyYAML", "types-requests", "types-simplejson", "typ
 
 [[package]]
 name = "hypercorn"
-version = "0.14.4"
+version = "0.15.0"
 description = "A ASGI Server based on Hyper libraries and inspired by Gunicorn"
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "hypercorn-0.14.4-py3-none-any.whl", hash = "sha256:f956200dbf8677684e6e976219ffa6691d6cf795281184b41dbb0b135ab37b8d"},
-    {file = "hypercorn-0.14.4.tar.gz", hash = "sha256:3fa504efc46a271640023c9b88c3184fd64993f47a282e8ae1a13ccb285c2f67"},
+    {file = "hypercorn-0.15.0-py3-none-any.whl", hash = "sha256:5008944999612fd188d7a1ca02e89d20065642b89503020ac392dfed11840730"},
+    {file = "hypercorn-0.15.0.tar.gz", hash = "sha256:d517f68d5dc7afa9a9d50ecefb0f769f466ebe8c1c18d2c2f447a24e763c9a63"},
 ]
 
 [package.dependencies]
@@ -394,7 +394,7 @@ priority = "*"
 wsproto = ">=0.14.0"
 
 [package.extras]
-docs = ["pydata_sphinx_theme"]
+docs = ["pydata_sphinx_theme", "sphinxcontrib_mermaid"]
 h3 = ["aioquic (>=0.9.0,<1.0)"]
 trio = ["exceptiongroup (>=1.1.0)", "trio (>=0.22.0)"]
 uvloop = ["uvloop"]
@@ -1389,4 +1389,4 @@ h11 = ">=0.9.0,<1"
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.11, <3.13"
-content-hash = "124193073d2c18d1dc79ebd8104cc8f361b218892b1f6ea445fd0effd1ed75fd"
+content-hash = "f00d33fdecd44054b18445be16235732abe31404115e4be2834bfaa43be12261"
