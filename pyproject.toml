@@ -36,14 +36,14 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = ">=3.11, <3.13"
 ctransformers = "^0.2.27"
-transformers = "^4.34.1"
+transformers = "^4.35.0"
 fastapi = "^0.104.1"
 hypercorn = "^0.15.0"
 httpx = "^0.25.0"
 
 [tool.poetry.group.dev.dependencies]
 pyinstaller = "^6.1.0"
-pyright = "^1.1.333"
+pyright = "^1.1.334"
 pylint = "^3.0.2"
 pytest = "^7.4.3"
 isort = "^5.12.0"
