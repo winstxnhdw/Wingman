@@ -43,7 +43,7 @@ httpx = "^0.25.2"
 
 [tool.poetry.group.dev.dependencies]
 pyinstaller = "^6.2.0"
-pyright = "^1.1.338"
+pyright = "^1.1.339"
 pylint = "^3.0.2"
 pytest = "^7.4.3"
 isort = "^5.12.0"
