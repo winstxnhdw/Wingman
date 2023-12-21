@@ -39,11 +39,11 @@ ctransformers = "^0.2.27"
 transformers = "^4.36.2"
 fastapi = "^0.105.0"
 hypercorn = "^0.15.0"
-httpx = "^0.25.2"
+httpx = "^0.26.0"
 
 [tool.poetry.group.dev.dependencies]
 pyinstaller = "^6.3.0"
-pyright = "^1.1.341"
+pyright = "^1.1.342"
 pylint = "^3.0.3"
 pytest = "^7.4.3"
 isort = "^5.13.2"
