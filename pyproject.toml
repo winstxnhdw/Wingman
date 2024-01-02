@@ -38,7 +38,7 @@ python = ">=3.11, <3.13"
 ctransformers = "^0.2.27"
 transformers = "^4.36.2"
 fastapi = "^0.108.0"
-hypercorn = "^0.15.0"
+hypercorn = "^0.16.0"
 httpx = "^0.26.0"
 
 [tool.poetry.group.dev.dependencies]
