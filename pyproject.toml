@@ -42,8 +42,8 @@ hypercorn = "^0.16.0"
 httpx = "^0.27.0"
 
 [tool.poetry.group.dev.dependencies]
-pyinstaller = "^6.4.0"
+pyinstaller = "^6.5.0"
 pyright = "^1.1.353"
 pylint = "^3.1.0"
-pytest = "^8.1.0"
+pytest = "^8.1.1"
 isort = "^5.13.2"
