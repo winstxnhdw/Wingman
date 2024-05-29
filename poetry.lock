@@ -501,13 +501,13 @@ typing = ["types-PyYAML", "types-requests", "types-simplejson", "types-toml", "t
 
 [[package]]
 name = "hypercorn"
-version = "0.17.2"
+version = "0.17.3"
 description = "A ASGI Server based on Hyper libraries and inspired by Gunicorn"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "hypercorn-0.17.2-py3-none-any.whl", hash = "sha256:eaa97b13c1fd8857cf31af34640704382ce3ed53cff6b3192869ea5f8244c6b1"},
-    {file = "hypercorn-0.17.2.tar.gz", hash = "sha256:3827860f7e0cf0320a1288f0762c10483617de19dae08cfc3fbeb2b3323a6ffb"},
+    {file = "hypercorn-0.17.3-py3-none-any.whl", hash = "sha256:059215dec34537f9d40a69258d323f56344805efb462959e727152b0aa504547"},
+    {file = "hypercorn-0.17.3.tar.gz", hash = "sha256:1b37802ee3ac52d2d85270700d565787ab16cf19e1462ccfa9f089ca17574165"},
 ]
 
 [package.dependencies]
@@ -520,7 +520,7 @@ wsproto = ">=0.14.0"
 docs = ["pydata_sphinx_theme", "sphinxcontrib_mermaid"]
 h3 = ["aioquic (>=0.9.0,<1.0)"]
 trio = ["trio (>=0.22.0)"]
-uvloop = ["uvloop"]
+uvloop = ["uvloop (>=0.18)"]
 
 [[package]]
 name = "hyperframe"
@@ -1122,13 +1122,13 @@ testutils = ["gitpython (>3)"]
 
 [[package]]
 name = "pyright"
-version = "1.1.364"
+version = "1.1.365"
 description = "Command line wrapper for pyright"
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "pyright-1.1.364-py3-none-any.whl", hash = "sha256:865f1e02873c5dc7427c95acf53659a118574010e6fb364e27e47ec5c46a9f26"},
-    {file = "pyright-1.1.364.tar.gz", hash = "sha256:612a2106a4078ec57efc22b5620729e9bdf4a3c17caba013b534bd33f7d08e5a"},
+    {file = "pyright-1.1.365-py3-none-any.whl", hash = "sha256:194d767a039f9034376b7ec8423841880ac6efdd061f3e283b4ad9fcd484a659"},
+    {file = "pyright-1.1.365.tar.gz", hash = "sha256:d7e69000939aed4bf823707086c30c84c005bdd39fac2dfb370f0e5be16c2ef2"},
 ]
 
 [package.dependencies]
@@ -2167,4 +2167,4 @@ h11 = ">=0.9.0,<1"
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.11, <3.13"
-content-hash = "1d6dc307f8495ba1aef9532e239c8140eda621056e8fdc90f7ef84e7487d6915"
+content-hash = "eaa863932a6a2f5b545712614058218242a70e29d7af97e0ffb0ad8354baa6c5"
