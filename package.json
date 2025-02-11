@@ -74,7 +74,7 @@
     "@vscode/test-electron": "^2.3.5",
     "@vscode/vsce": "^2.20.1",
     "chai": "^4.3.7",
-    "esbuild": "^0.19.0",
+    "esbuild": "^0.25.0",
     "eslint": "^8.46.0",
     "eslint-config-prettier": "^9.0.0",
     "glob": "^10.3.3",
